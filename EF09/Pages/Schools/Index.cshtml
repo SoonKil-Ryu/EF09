@@ -1,0 +1,57 @@
+﻿@page
+@model EF09.Pages.Schools.IndexModel
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].S_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Score.Kor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Score.Eng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Score.Math)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Students)
+        {
+            @*
+        foreach (var score in item)
+        {
+
+        }
+
+            *@
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.S_No)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Score.Kor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Score.Eng)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Score.Math)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
